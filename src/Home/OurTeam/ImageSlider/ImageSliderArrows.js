@@ -8,27 +8,35 @@ const ImageSliderArrows = (props) => {
 
 
   return (
-    <span className={classes.arrows}>
-      <span className={classes.arrow}>
-        <IconButton
-          width='100px'
-          widthMd='60px'
-          hover='white'
-          onClick={toLeft}
-          svgHover='blue'
-          svg={arrow} />
+    <div>
+
+      <span className={classes.arrows}>
+        <span className={classes.arrow}>
+          <IconButton
+            width='60px'
+            // widthMd='40px'
+            hover='white'
+            background='white'
+            onClick={toLeft}
+            svgColor='black'
+            imgSize='24px'
+            svg={arrow} />
+        </span>
+        <span className={classes.arrow}>
+          <IconButton
+            width='60px'
+            // widthMd='40px'
+            hover='white'
+            onClick={toRight}
+            background='white'
+            transform='rotate(180deg)'
+            svgColor='black'
+            imgSize='24px'
+            svg={arrow} />
+        </span>
       </span>
-      <span className={classes.arrow}>
-        <IconButton
-          width='100px'
-          widthMd='60px'
-          hover='white'
-          onClick={toRight}
-          transform='rotate(180deg)'
-          svgHover='blue'
-          svg={arrow} />
-      </span>
-    </span>
+    </div>
+
   );
 }
 
@@ -46,18 +54,18 @@ const arrow = <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" vie
 
 const useStyles = makeStyles((theme) => ({
   arrows: {
-    position: 'absolute',
-    right: 20,
-    bottom: 20,
     display: 'flex',
-    [theme.breakpoints.down('sm')]: {
-      display: 'flex',
-      right: '50%',
-      transform: 'translate(50%,0)',
+    paddingRight: 15,
+    marginLeft: 'auto',
+    width: 'fit-content',
+    [theme.breakpoints.down('xs')]: {
+      marginRight: 'auto',
+      padding: 0,
     }
   },
   arrow: {
-    margin: 15,
+    marginLeft: 5,
+    marginRight: 5,
   }
 }));
 

@@ -7,13 +7,13 @@ const FooterSocMedia = () => {
   return (
     <Box display='flex' width='fit-content' mr={{ xs: 'auto', lg: '0' }} ml='auto' >
       <Box m='5px' my='5px'>
-        <IconButton icon='/icons/facebook.svg' />
+        <IconButton icon='/icons/socialMedia/facebook.svg' />
       </Box>
       <Box m='5px' my='5px'>
-        <IconButton icon='/icons/linkedin.svg' />
+        <IconButton icon='/icons/socialMedia/linkedin.svg' />
       </Box>
       <Box m='5px' my='5px'>
-        <IconButton icon='/icons/twitter.svg' />
+        <IconButton icon='/icons/socialMedia/twitter.svg' />
       </Box>
     </Box>
   );
