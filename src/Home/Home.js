@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import ImageSlider from './ImageSlider';
 import OurTeam from './OurTeam';
+import Contact from './Contact';
+
 
 const Home = () => {
+  const ref = useRef();
+  const handleScroll = () => {
+    ref.current.scrollIntoView()
+    console.log(ref);
+  }
+
   return (
     <div>
-      <ImageSlider />
-      {/* <Box bgcolor='#999' opacity='0.3' height='100vh'>
-        <img src="/images/bg.png" alt="" />
-      </Box> */}
-      <OurTeam />
+      <ImageSlider handleScroll={handleScroll} />
+      <OurTeam ref={ref} />
+      <Contact />
+
+
+
     </div>
   );
 }

@@ -19,6 +19,7 @@ const CustomizedCard = (props) => {
         <CardContent name={slide.name} position={slide.position} />
 
         <CardActionButtons />
+
       </Card>
     </div>
   );
@@ -39,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     borderRadius: 10,
-
     background: 'transparent',
     boxShadow: 'none',
     position: 'relative',
@@ -58,6 +58,9 @@ const useStyles = makeStyles((theme) => ({
       },
     }
   },
+  shadow: {
+    background: '#0652A8'
+  }
 }));
 
 export default CustomizedCard;

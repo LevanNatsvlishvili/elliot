@@ -5,8 +5,11 @@ import ImageSliderArrows from './ImageSliderArrows';
 import ImageSliderSlides from './ImageSliderSlides';
 import ImageSliderDots from './ImageSliderDots';
 import ImageSliderContent from './ImageSliderContent/';
+import IconButton from 'Components/Buttons/IconButton';
+import Box from '@material-ui/core/Box';
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
+  const { handleScroll } = props;
   const classes = useStyles();
   const [curr, setCurr] = useState(0)
 
@@ -43,6 +46,10 @@ const ImageSlider = () => {
       <ImageSliderArrows toLeft={toLeft} toRight={toRight} />
 
       <ImageSliderContent />
+
+      <Box position='absolute' bottom='20px' left='20px'>
+        <IconButton onClick={handleScroll} width='60px' background='transparent' icon='/icons/scroll.svg' />
+      </Box>
     </div>
   );
 }

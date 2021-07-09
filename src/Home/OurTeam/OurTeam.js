@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { makeStyles } from '@material-ui/styles';
 import ImageSlider from './ImageSlider';
 
-const OurTeam = () => {
+const OurTeam = (props, ref) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.team}>
+    <div ref={ref} className={classes.team}>
       <ImageSlider slides={members} />
     </div>
   );
@@ -54,4 +54,4 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default OurTeam;
+export default forwardRef(OurTeam);

@@ -15,7 +15,10 @@ const BlockButton = (props) => {
   const { children, ...rest } = props;
 
   return (
-    <Button className={classes.button} {...rest}>
+    <Button
+      className={classes.button}
+      classes={{ disabled: classes.disabled }}
+      {...rest}>
       {children}
     </Button>
   );
@@ -33,7 +36,14 @@ const useStyles = makeStyles((theme) => ({
       background: props => theme.colors[props.hover || props.background || 'blue'],
       opacity: .9,
     },
+    '&$disabled': {
+      color: (props) => theme.colors[props.color || 'white'],
+      opacity: '.3'
+    }
   },
+  disabled: {
+    color: (props) => theme.colors[props.color || 'white'],
+  }
 }));
 
 export default BlockButton;

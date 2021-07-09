@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 
 
 const IconButton = (props) => {
-  const { icon, svg, onClick, ...rest } = props;
+  const { icon, svg, onClick, } = props;
   const classes = useStyles({
     background: props.background,
     width: props.width,

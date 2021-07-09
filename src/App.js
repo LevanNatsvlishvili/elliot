@@ -7,8 +7,8 @@ import Layout from 'Layout';
 function App() {
   return (
     <div>
-      <CssBaseline />
       <MuiThemeProvider theme={Theme}>
+        <CssBaseline />
         <Layout>
           <Home />
         </Layout>

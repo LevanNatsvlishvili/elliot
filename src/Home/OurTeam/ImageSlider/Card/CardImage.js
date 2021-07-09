@@ -7,22 +7,44 @@ const CustomizedCard = (props) => {
   const { img } = props;
 
   return (
-    <CardMedia
-      className={classes.media}
-      component="img"
-      alt="member"
-      maxHeight='135px'
-      image={img}
-    />
+    <div className={classes.root}>
+
+      <CardMedia
+        className={classes.media}
+        component="img"
+        alt="member"
+        image={img}
+      />
+      <main className={classes.shadow}></main>
+
+    </div>
   );
 
 }
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    position: 'relative',
+    paddingTop: '15px'
+  },
   media: {
     maxHeight: 535,
   },
-
+  shadow: {
+    display: 'none',
+    height: '103%',
+    width: '80%',
+    background: '#0652A8',
+    position: 'absolute',
+    top: '52%',
+    transform: 'translate(-50%,-50%)',
+    left: '50%',
+    zIndex: '-1',
+    borderRadius: '10px',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none!important'
+    }
+  }
 }));
 
 export default CustomizedCard;

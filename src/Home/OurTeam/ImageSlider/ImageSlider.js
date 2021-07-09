@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import Hidden from '@material-ui/core/hidden';
 import ImageSliderArrows from './ImageSliderArrows';
 import ImageSliderSlides from './ImageSliderSlides';
 
@@ -33,8 +32,6 @@ const ImageSlider = (props) => {
 
       <div className={classes.slider}>
         <ImageSliderSlides slides={slides} curr={curr} />
-
-
       </div>
     </div>
   );

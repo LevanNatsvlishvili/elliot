@@ -51,9 +51,8 @@ const useStyles = makeStyles((theme) => ({
     bottom: 20,
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
-      display: 'flex',
-      right: '50%',
-      transform: 'translate(50%,0)',
+      right: 10,
+      bottom: 10,
     }
   },
   arrow: {
