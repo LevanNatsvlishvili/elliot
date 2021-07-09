@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles } from '@material-ui/core/styles';
-import NavbarMenu from './NavbarMenu';
+import HeaderNav from './HeaderNav';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
-import ScrollTop from './NavbarScrollTop';
+import ScrollTop from './HeaderScrollTop';
 
-const Navbar = () => {
+const Header = () => {
   const classes = useStyles();
   const [open, setOpen] = useState(true);
 
@@ -17,7 +17,7 @@ const Navbar = () => {
   }
 
   return (
-    <>
+    <header>
       <AppBar position='absolute' className={classes.appbar} >
         <Toolbar
           id="back-to-top-anchor"
@@ -32,14 +32,14 @@ const Navbar = () => {
           <img className={classes.logo} src='/images/logo.svg' alt='logo' />
 
           <Hidden xsDown={open}>
-            <NavbarMenu />
+            <HeaderNav />
           </Hidden>
 
         </Toolbar>
       </AppBar>
 
       <ScrollTop />
-    </>
+    </header>
   );
 }
 
@@ -77,4 +77,4 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default Navbar;
+export default Header;

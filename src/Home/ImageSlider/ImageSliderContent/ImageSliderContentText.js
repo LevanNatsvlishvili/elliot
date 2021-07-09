@@ -15,6 +15,7 @@ const ImageSliderContentText = () => {
           lineHeightMd='32px'
           color='white'
           textAlign='center'
+          component='h2'
         >
           We Do Software Development
         </Text>
@@ -23,7 +24,7 @@ const ImageSliderContentText = () => {
         <Text
           fontSize='16px'
           fontSizeMd='14px'
-          fofntWeight='700'
+          fontWeight='700'
           lineHeight='24px'
           color='white'
           textAlign='center'

@@ -12,19 +12,21 @@ const Contact = () => {
     setValue(val);
   }
   return (
-    <Box p={{ xs: '0 15px', sm: '0 40px', md: '0 98px' }} mt='130px' mb='100px' >
-      <Switch handleClick={handleClick} value={value} />
-      <Box mt='80px'>
-        <Grid container spacing={3}>
-          <Grid item xs={12} lg={6}>
-            <ContactForm disabled={value !== 'contact' ? true : false} />
+    <section>
+      <Box p={{ xs: '0 15px', sm: '0 40px', md: '0 98px' }} mt='130px' mb='100px' >
+        <Switch handleClick={handleClick} value={value} />
+        <Box mt='80px'>
+          <Grid container spacing={3}>
+            <Grid item xs={12} lg={6}>
+              <ContactForm disabled={value !== 'contact' ? true : false} />
+            </Grid>
+            <Grid item xs={12} lg={6}>
+              <Map disabled={value !== 'map' ? true : false} />
+            </Grid>
           </Grid>
-          <Grid item xs={12} lg={6}>
-            <Map disabled={value !== 'map' ? true : false} />
-          </Grid>
-        </Grid>
+        </Box>
       </Box>
-    </Box>
+    </section>
   );
 }
 

@@ -28,6 +28,8 @@ const ImageSlider = (props) => {
 
   return (
     <div className={classes.team}>
+
+
       <ImageSliderArrows toLeft={toLeft} toRight={toRight} />
 
       <div className={classes.slider}>

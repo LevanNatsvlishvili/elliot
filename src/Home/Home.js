@@ -16,9 +16,6 @@ const Home = () => {
       <ImageSlider handleScroll={handleScroll} />
       <OurTeam ref={ref} />
       <Contact />
-
-
-
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import IconButton from 'Components/Buttons/IconButton';
+import Text from 'Components/Text';
 
 const ImageSliderArrows = (props) => {
   const classes = useStyles();
@@ -8,8 +9,15 @@ const ImageSliderArrows = (props) => {
 
 
   return (
-    <div>
-
+    <div className={classes.arr}>
+      <Text
+        fontSize='32px'
+        fontWeight='600'
+        lineHeight='48px'
+        color='white'
+      >
+        OUR TEAM
+      </Text>
       <span className={classes.arrows}>
         <span className={classes.arrow}>
           <IconButton
@@ -53,14 +61,22 @@ const arrow = <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" vie
 
 
 const useStyles = makeStyles((theme) => ({
-  arrows: {
+  arr: {
     display: 'flex',
     paddingRight: 15,
+    paddingLeft: 15,
+    alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+      padding: 0,
+      flexDirection: 'column',
+    }
+  },
+  arrows: {
+    display: 'flex',
     marginLeft: 'auto',
     width: 'fit-content',
     [theme.breakpoints.down('xs')]: {
       marginRight: 'auto',
-      padding: 0,
     }
   },
   arrow: {

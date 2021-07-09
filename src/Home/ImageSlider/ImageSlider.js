@@ -36,21 +36,23 @@ const ImageSlider = (props) => {
   }
 
   return (
-    <div className={classes.slider}>
-      <ImageSliderSlides slides={slides} curr={curr} />
+    <section>
+      <div className={classes.slider}>
+        <ImageSliderSlides slides={slides} curr={curr} />
 
-      <Hidden smDown>
-        <ImageSliderDots setImage={setImage} slides={slides} curr={curr} />
-      </Hidden>
+        <Hidden smDown>
+          <ImageSliderDots setImage={setImage} slides={slides} curr={curr} />
+        </Hidden>
 
-      <ImageSliderArrows toLeft={toLeft} toRight={toRight} />
+        <ImageSliderArrows toLeft={toLeft} toRight={toRight} />
 
-      <ImageSliderContent />
+        <ImageSliderContent />
 
-      <Box position='absolute' bottom='20px' left='20px'>
-        <IconButton onClick={handleScroll} width='60px' background='transparent' icon='/icons/scroll.svg' />
-      </Box>
-    </div>
+        <Box position='absolute' bottom='20px' left='20px'>
+          <IconButton onClick={handleScroll} width='60px' background='transparent' icon='/icons/scroll.svg' />
+        </Box>
+      </div>
+    </section>
   );
 }
 

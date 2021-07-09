@@ -3,19 +3,27 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 const Text = (props) => {
+  const { children,
+    color,
+    fontSize,
+    fontSizeMd,
+    lineHeight,
+    lineHeightMd,
+    fontWeight,
+    textAlign,
+    ...rest } = props;
+
   const classes = useStyles({
-    color: props.color,
-    fontSize: props.fontSize,
-    fontSizeMd: props.fontSizeMd,
-    lineHeight: props.lineHeight,
-    lineHeightMd: props.lineHeightMd,
-    fontWeight: props.fontWeight,
-    fontFamily: props.fontFamily,
-    textAlign: props.textAlign,
+    color: color,
+    fontSize: fontSize,
+    fontSizeMd: fontSizeMd,
+    lineHeight: lineHeight,
+    lineHeightMd: lineHeightMd,
+    fontWeight: fontWeight,
+    textAlign: textAlign,
   });
-  const { children } = props;
   return (
-    <Typography className={classes.root} >
+    <Typography className={classes.root} {...rest}>
       {children}
     </Typography>
   );

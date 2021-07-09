@@ -6,9 +6,9 @@ const OurTeam = (props, ref) => {
   const classes = useStyles();
 
   return (
-    <div ref={ref} className={classes.team}>
+    <section ref={ref} className={classes.team}>
       <ImageSlider slides={members} />
-    </div>
+    </section>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import Text from 'Components/Text';
-import { Box } from '@material-ui/core';
+import Box from '@material-ui/core/Box';
 
-const NavbarMenu = () => {
+const HeaderMenu = () => {
 
   return (
     <Box
@@ -36,4 +36,4 @@ const links = [
   'Contact',
 ]
 
-export default NavbarMenu;
+export default HeaderMenu;
